@@ -50,7 +50,7 @@ export default function Game() {
     beginNextTurn();
   }
 
-  function incrementScore(playerIndex) {
+  function incrementScore() {
     let newList = [...playerList];
     let player = {
       ...newList[playerIndex],
