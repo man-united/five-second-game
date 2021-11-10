@@ -46,6 +46,11 @@ export default function Game() {
   var currPlayer = playerList[playerIndex];
 
   function handleCorrect() {
+    incrementScore();
+    beginNextTurn();
+  }
+
+  function incrementScore(playerIndex) {
     let newList = [...playerList];
     let player = {
       ...newList[playerIndex],
@@ -53,7 +58,6 @@ export default function Game() {
     };
     newList[playerIndex] = player;
     setPlayerList(newList);
-    beginNextTurn();
   }
 
   function beginNextTurn() {
