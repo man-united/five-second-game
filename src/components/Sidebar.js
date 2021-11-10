@@ -25,7 +25,7 @@ export default function Sidebar(props) {
 
   return (
     <Container>
-      <h3>Sidebar</h3>
+      <h3>Scoreboard</h3>
 
       <FlipMove typeName="ol" duration={500}>
         {sortedPlayerList.map((player, index) => (
