@@ -5,10 +5,14 @@ import Timer from 'tiny-timer';
 const Container = styled.div`
   flex-grow: 1;
   text-align: center;
+
+  button {
+    font-size: 1.5em;
+  }
 `;
 
-const Paragraph = styled.p`
-  font-size: 1.5em;
+const Span = styled.span`
+  font-size: 6em;
   color: #4f6457;
 `;
 
@@ -46,12 +50,13 @@ export default function CountdownTimer(props) {
       {turnStatus === 'readying' && (
         <button onClick={startTimer}> Ready </button>
       )}
-      {turnStatus === 'countingDown' && <Paragraph>{time}</Paragraph>}
-      {turnStatus === 'finished' && <Paragraph>Time's up!</Paragraph>}
+      {turnStatus === 'countingDown' && <Span>{time}</Span>}
+
       {turnStatus === 'finished' && (
         <div>
-          <button onClick={handleCorrect}>correct</button>
-          <button onClick={handleWrong}>wrong</button>
+          <button onClick={handleCorrect}>✔️</button>
+          <button onClick={handleWrong}>❌</button>
+          <p>Time's up!</p>
         </div>
       )}
     </Container>
