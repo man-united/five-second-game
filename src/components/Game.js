@@ -27,6 +27,10 @@ const BigDiv = styled(Div)`
   flex-grow: 2;
 `;
 
+const Question = styled.div`
+  font-size: 2em;
+`;
+
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
@@ -82,7 +86,7 @@ export default function Game() {
         <h3>{currPlayer.name}'s Turn!</h3>
       </Div>
       <BigDiv>
-        <div>{questions[turnCount]}</div>
+        <Question>{questions[turnCount]}</Question>
       </BigDiv>
       <BigDiv alignment="top">
         <CountdownTimer

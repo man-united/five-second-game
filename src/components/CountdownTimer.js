@@ -7,6 +7,11 @@ const Container = styled.div`
   text-align: center;
 `;
 
+const Paragraph = styled.p`
+  font-size: 1.5em;
+  color: #4f6457;
+`;
+
 export default function CountdownTimer(props) {
   const [time, setTime] = useState(5);
   const [turnStatus, setTurnStatus] = useState('readying');
@@ -41,8 +46,8 @@ export default function CountdownTimer(props) {
       {turnStatus === 'readying' && (
         <button onClick={startTimer}> Ready </button>
       )}
-      {turnStatus === 'countingDown' && <p>{time}</p>}
-      {turnStatus === 'finished' && <p>Time's up!</p>}
+      {turnStatus === 'countingDown' && <Paragraph>{time}</Paragraph>}
+      {turnStatus === 'finished' && <Paragraph>Time's up!</Paragraph>}
       {turnStatus === 'finished' && (
         <div>
           <button onClick={handleCorrect}>correct</button>
