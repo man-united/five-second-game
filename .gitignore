@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#question list and formatter
+sort.py
+questions.txt
+formatted-qns.txt
