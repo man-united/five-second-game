@@ -18,13 +18,13 @@ const Container = styled.div`
 `;
 
 const Div = styled.div`
-  flex-grow: 1;
+  height: 26%;
   display: flex;
   align-items: ${(props) => props.alignment || 'center'};
 `;
 
 const BigDiv = styled(Div)`
-  flex-grow: 2;
+  height: 37%;
 `;
 
 const Question = styled.div`
