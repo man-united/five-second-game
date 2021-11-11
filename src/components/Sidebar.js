@@ -6,6 +6,7 @@ import { GameStateContext } from './Content';
 
 const Container = styled.div`
   width: 200px;
+  border-radius: 20px;
   text-align: center;
   background-color: #4f6457;
   h3 {

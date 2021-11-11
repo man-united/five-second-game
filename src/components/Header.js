@@ -9,6 +9,7 @@ const Container = styled.div`
   color: #d9b44a;
   background-color: #4f6457;
   margin: 20px;
+  border-radius: 25px;
 `;
 
 const HourGlass = styled.img`
