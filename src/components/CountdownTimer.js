@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Timer from 'tiny-timer';
+import fiveSecondBeepSound from './../assets/fiveSecondBeepSound.wav';
 
 const Container = styled.div`
   flex-grow: 1;
@@ -19,6 +20,7 @@ const Span = styled.span`
 export default function CountdownTimer(props) {
   const [time, setTime] = useState(5);
   const [turnStatus, setTurnStatus] = useState('readying');
+  let fiveSecondBeepAudio = new Audio(fiveSecondBeepSound);
 
   function startTimer() {
     const timer = new Timer();
@@ -32,6 +34,8 @@ export default function CountdownTimer(props) {
       setTurnStatus('finished');
     });
     setTurnStatus('countingDown');
+
+    fiveSecondBeepAudio.play();
     timer.start(5000);
   }
 
