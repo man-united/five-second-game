@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { QUESTIONS } from './constants';
 import { GameStateContext } from './Content';
 import CountdownTimer from './CountdownTimer';
-import correctSound from './../assets/correctSound.wav';
-import wrongSound from './../assets/wrongSound.wav';
+import { playAudio } from './Audio';
 
 const Container = styled.div`
   flex-grow: 1;
@@ -52,18 +51,14 @@ export default function Game() {
   var playerIndex = (turnCount - 1) % playerCount;
   var currPlayer = playerList[playerIndex];
 
-  let correctAudio = new Audio(correctSound);
-  let wrongAudio = new Audio(wrongSound);
-  wrongAudio.volume = 0.1;
-
   function handleCorrect() {
-    correctAudio.play();
+    playAudio('correct');
     incrementScore();
     beginNextTurn();
   }
 
   function handleWrong() {
-    wrongAudio.play();
+    playAudio('wrong', 0.1);
     beginNextTurn();
   }
 

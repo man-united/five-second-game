@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import uniqid from 'uniqid';
 import { GameStateContext } from './Content';
-import UIPopUpSound from './../assets/UIPopUpSound.wav';
+import { playAudio } from './Audio';
 
 const Container = styled.div`
   flex-grow: 1;
@@ -27,15 +27,13 @@ export default function GameSetup(props) {
   const [playerList, setPlayerList] = players;
   const [, setHasGameStarted] = gameBegun;
   const [inputText, setInputText] = useState('');
-  let PopUpAudio = new Audio(UIPopUpSound);
-  PopUpAudio.volume = 0.5;
 
   function handleChange(e) {
     setInputText(e.target.value);
   }
 
   function handleSubmit(e) {
-    PopUpAudio.play();
+    playAudio('UIPopUp', 0.5);
     e.preventDefault();
     if (inputText.length === 0 || playerList.length >= 12) {
       return;
@@ -52,7 +50,7 @@ export default function GameSetup(props) {
   }
 
   function startGame() {
-    PopUpAudio.play();
+    playAudio('UIPopUp', 0.5);
     if (playerList.length < 2) {
       alert('Must have at least 2 players to start game!');
       return;
