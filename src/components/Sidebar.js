@@ -22,7 +22,12 @@ export default function Sidebar(props) {
   const { players } = useContext(GameStateContext);
   const [playerList] = players;
   var sortedPlayerList = [...playerList];
-  sortedPlayerList.sort((a, b) => b.score - a.score);
+  sortedPlayerList.sort((a, b) => {
+    if (a.score === b.score) {
+      return b.tiebreaker - a.tiebreaker;
+    }
+    return b.score - a.score;
+  });
 
   return (
     <Container>

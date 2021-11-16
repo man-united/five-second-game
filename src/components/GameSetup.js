@@ -42,6 +42,7 @@ export default function GameSetup(props) {
       id: uniqid(),
       name: inputText,
       score: 0,
+      tiebreaker: 0,
     };
     setPlayerList((prevPlayers) => {
       return [...prevPlayers, newPlayer];

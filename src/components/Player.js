@@ -20,7 +20,7 @@ const Container = styled.div`
 `;
 
 export const Player = forwardRef((props, ref) => {
-  const { id, name, score } = props.player;
+  const { id, name, score, tiebreaker } = props.player;
 
   return (
     <Container ref={ref} key={id}>

@@ -67,6 +67,7 @@ export default function Game() {
     let player = {
       ...newList[playerIndex],
       score: currPlayer.score + 1,
+      tiebreaker: turnCount,
     };
     newList[playerIndex] = player;
     setPlayerList(newList);
