@@ -58,7 +58,7 @@ export default function Game() {
   }
 
   function handleWrong() {
-    playAudio('wrong', 0.1);
+    playAudio('wrong');
     beginNextTurn();
   }
 

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import uniqid from 'uniqid';
+import MuteButton from './MuteButton';
 import { GameStateContext } from './Content';
 import { playAudio } from './Audio';
 
@@ -20,6 +21,7 @@ const Div = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 `;
 
 export default function GameSetup(props) {
@@ -51,7 +53,7 @@ export default function GameSetup(props) {
   }
 
   function startGame() {
-    playAudio('UIPopUp', 0.5);
+    playAudio('UIPopUp');
     if (playerList.length < 2) {
       alert('Must have at least 2 players to start game!');
       return;
@@ -63,6 +65,7 @@ export default function GameSetup(props) {
     <Container>
       <Div>
         <h3>Add Players</h3>
+        <MuteButton></MuteButton>
       </Div>
       <Div>
         <form onSubmit={handleSubmit}>
