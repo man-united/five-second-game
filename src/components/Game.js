@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { QUESTIONS } from './constants';
 import { GameStateContext } from './Content';
 import CountdownTimer from './CountdownTimer';
+import MuteButton from './MuteButton';
 import { playAudio } from './Audio';
 
 const Container = styled.div`
@@ -15,6 +16,7 @@ const Container = styled.div`
   align-items: center;
   background-color: #acd0c0;
   margin: 0 20px 20px 0;
+  position: relative;
 `;
 
 const Div = styled.div`
@@ -81,6 +83,7 @@ export default function Game() {
     <Container>
       <Div>
         <h3>{currPlayer.name}'s Turn!</h3>
+        <MuteButton></MuteButton>
       </Div>
       <BigDiv>
         <Question>{questions[turnCount]}</Question>
