@@ -1,5 +1,5 @@
 import React from 'react';
-//import hourglass from '../assets/hourglass.png';
+import hourglass from '../assets/hourglass.png';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -21,9 +21,9 @@ const HourGlass = styled.img`
 export default function Header() {
   return (
     <Container>
-      {/*<HourGlass src={hourglass} alt="hourglass" />*/}
+      <HourGlass src={hourglass} alt="hourglass" />
       <h1>5 second game</h1>
-      {/* <HourGlass src={hourglass} alt="hourglass" />*/}
+      <HourGlass src={hourglass} alt="hourglass" />
     </Container>
   );
 }

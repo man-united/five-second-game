@@ -36,7 +36,11 @@ export default function MuteButton() {
   }
   return (
     <Button onClick={handleToggle}>
-      {muted ? <img src={mutedSpeaker}></img> : <img src={speaker}></img>}
+      {muted ? (
+        <img src={mutedSpeaker} alt="speaker"></img>
+      ) : (
+        <img src={speaker}></img>
+      )}
     </Button>
   );
 }
