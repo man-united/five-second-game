@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/five-second-game/static/js/main.9a3cbf74.chunk.js",
+    "main.js.map": "/five-second-game/static/js/main.9a3cbf74.chunk.js.map",
+    "runtime-main.js": "/five-second-game/static/js/runtime-main.f82b2744.js",
+    "runtime-main.js.map": "/five-second-game/static/js/runtime-main.f82b2744.js.map",
+    "static/js/2.99894eb3.chunk.js": "/five-second-game/static/js/2.99894eb3.chunk.js",
+    "static/js/2.99894eb3.chunk.js.map": "/five-second-game/static/js/2.99894eb3.chunk.js.map",
+    "index.html": "/five-second-game/index.html",
+    "static/js/2.99894eb3.chunk.js.LICENSE.txt": "/five-second-game/static/js/2.99894eb3.chunk.js.LICENSE.txt",
+    "static/media/UIPopUpSound.1c9167e6.wav": "/five-second-game/static/media/UIPopUpSound.1c9167e6.wav",
+    "static/media/correctSound.6840a195.wav": "/five-second-game/static/media/correctSound.6840a195.wav",
+    "static/media/fiveSecondBeepSound.00b6c093.wav": "/five-second-game/static/media/fiveSecondBeepSound.00b6c093.wav",
+    "static/media/hourglass.910fe327.png": "/five-second-game/static/media/hourglass.910fe327.png",
+    "static/media/mutedSpeaker.444f1638.png": "/five-second-game/static/media/mutedSpeaker.444f1638.png",
+    "static/media/wrongSound.e2d2c19d.wav": "/five-second-game/static/media/wrongSound.e2d2c19d.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f82b2744.js",
+    "static/js/2.99894eb3.chunk.js",
+    "static/js/main.9a3cbf74.chunk.js"
+  ]
+}
